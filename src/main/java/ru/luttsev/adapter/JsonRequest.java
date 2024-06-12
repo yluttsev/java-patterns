@@ -1,5 +1,9 @@
 package ru.luttsev.adapter;
 
+/**
+ * Класс запроса типа JSON
+ * @author Yuri Luttsev
+ */
 public class JsonRequest implements Json {
 
     @Override

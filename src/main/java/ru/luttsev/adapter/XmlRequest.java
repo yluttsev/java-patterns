@@ -1,5 +1,9 @@
 package ru.luttsev.adapter;
 
+/**
+ * Класс запроса типа XML
+ * @author Yuri Luttsev
+ */
 public class XmlRequest implements Xml {
     @Override
     public String getXmlData() {
