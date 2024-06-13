@@ -12,7 +12,10 @@ public class UserTest {
                 .id(id)
                 .firstName(firstName)
                 .build();
-        Assertions.assertEquals(user.getId(), id);
-        Assertions.assertEquals(user.getFirstName(), firstName);
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(user.getId(), id),
+                () -> Assertions.assertEquals(user.getFirstName(), firstName),
+                () -> Assertions.assertNull(user.getBirthday())
+        );
     }
 }
