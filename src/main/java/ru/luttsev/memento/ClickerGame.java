@@ -1,5 +1,9 @@
 package ru.luttsev.memento;
 
+/**
+ * Главный класс игры
+ * @author Yuri Luttsev
+ */
 public class ClickerGame {
     private int score;
     private GameState state;
@@ -16,10 +20,16 @@ public class ClickerGame {
         this.score++;
     }
 
+    /**
+     * Сохраняет текущее состояние игры
+     */
     public void saveState() {
         this.state = new GameState(this.score);
     }
 
+    /**
+     * Восстанавливает последнее сохраненное состояние игры
+     */
     public void restoreState() {
         if (this.state != null) {
             this.score = this.state.getScore();
@@ -31,6 +41,9 @@ public class ClickerGame {
         return "Current score: " + this.score;
     }
 
+    /**
+     * Внутренний класс, описывающий состояние игры
+     */
     private class GameState {
         private final int score;
 
